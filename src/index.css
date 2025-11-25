@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+@theme {
+  --background-image-neon: linear-gradient(135deg, #00FFFF 0%, #0099FF 100%);
+}
