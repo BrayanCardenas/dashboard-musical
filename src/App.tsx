@@ -1,9 +1,11 @@
 import Login from './pages/Login.tsx'
+import Dashboard from './components/Dashboard.tsx'
 
-function App() {
+const App = () => {
 
   return (
     <>
+      <Dashboard />
       <Login />
     </>
   )
