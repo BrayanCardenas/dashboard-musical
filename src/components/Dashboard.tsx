@@ -1,10 +1,18 @@
+import { Outlet } from "react-router-dom"
 import Sidebar from "./Sidebar";
-import Main from "./Main";
+// import Agenda from "./Agenda";
+// import Musicos from "./Musicos";
+// import Canciones from "./Canciones";
 const Dashboard = () => {
 	return (
 		<div className="flex h-screen">
 			<Sidebar />
-			<Main />
+			{/* <Agenda title={"Agenda"} /> */}
+			{/* <Musicos title={"Músicos"} /> */}
+			{/* <Canciones title={"Canciones"} /> */}
+
+			<Outlet />
+
 		</div>
 
 	)

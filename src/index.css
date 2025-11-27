@@ -3,4 +3,6 @@
 @theme {
   --background-image-neon: linear-gradient(135deg, #00FFFF 0%, #0099FF 100%);
   --color-neonT: #00FFFF;
+  --color-foreground: #71717A;
+  --color-border: #E4E4E7;
 }
