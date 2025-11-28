@@ -1,4 +1,4 @@
-import Header from "./Header"
+import Header from "../components/layout/Header"
 
 const Configuracion = ({ title }: { title: string }) => {
 	return (

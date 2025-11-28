@@ -1,10 +1,13 @@
-export const LogoIcon = ({ size, className }: { size?: number, className?: string }) => (
+import type { SVGProps } from "react";
+
+export const LogoIcon = ({ size, className, ...props }: { size?: number } & SVGProps<SVGSVGElement>) => (
   <svg
     className={className}
     xmlns="http://www.w3.org/2000/svg"
     width={size}
     height={size}
     viewBox="0 0 24 24"
+    {...props}
   >
     <g fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2">
       <path d="M22 16V2L9 5v13" />

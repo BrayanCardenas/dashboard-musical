@@ -1,4 +1,4 @@
-import Header from "./Header"
+import Header from "../components/layout/Header"
 import { stats } from "../data/data"
 import { CalendarIcon } from "../icons/CalendarIcon";
 import { UsersIcon } from "../icons/UsersIcon";
@@ -82,7 +82,7 @@ const Dashboard = ({ title }: { title: string }) => {
                   Tasa de Ocupación
                 </h3>
                 <div className="p-2 bg-cyan-500/9 rounded-xl">
-                  <Stonks className="h-4 w-4 text-neonT"/>
+                  <Stonks className="h-4 w-4 text-neonT" />
                 </div>
               </div>
               <div className="p-6 pt-0">
@@ -122,27 +122,23 @@ const Dashboard = ({ title }: { title: string }) => {
                   </thead>
                   <tbody>
 
-                    {stats.map(({ nombre, fecha, lugar, estado }) => (
-                      <tr className="border-b border-border">
+                    {stats.map(({ nombre, fecha, lugar, estado }, index) => (
+                      <tr key={index} className="border-b border-border">
                         <td className="p-4 align-middle font-medium">
                           {nombre}
                         </td>
                         <td className="p-4 align-middle">
-
                           {fecha}
-
                         </td>
                         <td className="p-4 align-middle">
                           {lugar}
                         </td>
-
                         <td className="p-4 align-middle">
                           <div className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold
                           ${estado === "Confirmado" ? "bg-neon" : "bg-foreground/20"}`}>
                             {estado}
                           </div>
                         </td>
-
                       </tr>
                     ))}
                   </tbody>

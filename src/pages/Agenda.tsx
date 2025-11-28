@@ -1,5 +1,5 @@
-import Header from "./Header";
-import AddItem from "./AddItem";
+import Header from "../components/layout/Header";
+import AddItem from "../components/AddItem";
 import { CalendarIcon } from "../icons/CalendarIcon";
 import { MapPinIcon } from "../icons/MapPinIcon";
 import { UsersIcon } from "../icons/UsersIcon";
@@ -53,8 +53,8 @@ const Agenda = ({ title }: { title: string }) => {
                   </thead>
                   <tbody>
 
-                    {eventos.map(({ nombre, fecha, lugar, estado, musicos }) => (
-                      <tr className="border-b border-border">
+                    {eventos.map(({ nombre, fecha, lugar, estado, musicos }, index) => (
+                      <tr key={index} className="border-b border-border">
                         <td className="p-4 align-middle font-medium">
                           {nombre}
                         </td>

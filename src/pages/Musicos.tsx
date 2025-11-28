@@ -1,20 +1,15 @@
-import Header from "./Header";
-import AddItem from "./AddItem";
+import Header from "../components/layout/Header";
+import AddItem from "../components/AddItem";
 import { MailIcon } from "../icons/MailIcon";
 import { PhoneIcon } from "../icons/PhoneIcon";
 import { musicos } from "../data/data";
+import { estadoColors } from "../constants";
 
 const Musicos = ({ title }: { title: string }) => {
   const h1 = "Músicos"
   const p = "Gestiona tu equipo de músicos profesionales"
   const h3 = "Lista de Músicos"
-
   const btn = "Nuevo Músico"
-
-  const estadoColors: Record<"Activo" | "Inactivo", string> = {
-    Activo: "bg-neon",
-    Inactivo: "bg-foreground/20"
-  }
 
   return (
     <div className="flex-1 flex flex-col">
@@ -53,8 +48,8 @@ const Musicos = ({ title }: { title: string }) => {
                   </thead>
                   <tbody>
 
-                    {musicos.map(({ nombre, instrumento, contacto, estado }) => (
-                      <tr className="border-b border-border">
+                    {musicos.map(({ nombre, instrumento, contacto, estado }, index) => (
+                      <tr key={index} className="border-b border-border">
                         <td className="p-4 align-middle font-medium">
                           {nombre}
                         </td>

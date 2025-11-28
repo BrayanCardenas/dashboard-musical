@@ -1,11 +1,11 @@
-import Logo from "./Logo"
+import Logo from "../Logo"
 import { NavLink } from "react-router-dom"
-import { DashboardIcon } from "../icons/DashboardIcon";
-import { CalendarIcon } from "../icons/CalendarIcon";
-import { UsersIcon } from "../icons/UsersIcon";
-import { DiscIcon } from "../icons/DiscIcon";
-import { SettingsIcon } from "../icons/SettingsIcon";
-import { Out } from "../icons/Out";
+import { DashboardIcon } from "../../icons/DashboardIcon";
+import { CalendarIcon } from "../../icons/CalendarIcon";
+import { UsersIcon } from "../../icons/UsersIcon";
+import { DiscIcon } from "../../icons/DiscIcon";
+import { SettingsIcon } from "../../icons/SettingsIcon";
+import { Out } from "../../icons/Out";
 
 const Sidebar = () => {
   return (

@@ -1,11 +1,10 @@
-
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import Layout from "./components/Layout"
-import Canciones from "./components/Canciones"
-import Musicos from "./components/Musicos"
-import Agenda from "./components/Agenda"
-import Configuracion from "./components/Configuracion"
-import Dashboard from "./components/Dashboard"
+import Layout from "./components/layout/Layout"
+import Canciones from "./pages/Canciones"
+import Musicos from "./pages/Musicos"
+import Agenda from "./pages/Agenda"
+import Configuracion from "./pages/Configuracion"
+import Dashboard from "./pages/Dashboard"
 
 const App = () => {
 

@@ -1,5 +1,6 @@
-import Header from "./Header";
-import AddItem from "./AddItem";
+import Header from "../components/layout/Header";
+import AddItem from "../components/AddItem";
+import { dificultadColors } from "../constants";
 import { MusicNoteIcon } from "../icons/MusicNoteIcon";
 import { ClockIcon } from "../icons/ClockIcon";
 import { canciones } from "../data/data"
@@ -10,14 +11,8 @@ const Canciones = ({ title }: { title: string }) => {
   const btn = "Nueva Canción"
   const h3 = "Todas las Canciones"
 
-  type Nivel = "Básico" | "Intermedio" | "Avanzado"
 
-  const dificultadColors: Record<Nivel, { text: string; bg: string }> = {
-    Básico: { text: "text-green-600", bg: "bg-green-100" },
-    Intermedio: { text: "text-yellow-500", bg: "bg-yellow-100" },
-    Avanzado: { text: "text-red-500", bg: "bg-red-100" }
-  }
-  
+
   return (
     <div className="flex-1 flex flex-col">
       <Header title={title} />
@@ -59,8 +54,8 @@ const Canciones = ({ title }: { title: string }) => {
                   </thead>
                   <tbody>
 
-                    {canciones.map(({ titulo, artista, duracion, genero, dificultad }) => (
-                      <tr className="border-b border-border">
+                    {canciones.map(({ titulo, artista, duracion, genero, dificultad }, index) => (
+                      <tr key={index} className="border-b border-border">
                         <td className="p-4 align-middle font-medium">
                           {titulo}
                         </td>
