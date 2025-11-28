@@ -1,5 +1,3 @@
-
-
 export const LogoIcon = ({ size, className }: { size?: number, className?: string }) => (
   <svg
     className={className}

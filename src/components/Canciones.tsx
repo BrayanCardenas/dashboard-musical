@@ -2,6 +2,7 @@ import Header from "./Header";
 import AddItem from "./AddItem";
 import { MusicNoteIcon } from "../icons/MusicNoteIcon";
 import { ClockIcon } from "../icons/ClockIcon";
+import { canciones } from "../data/data"
 
 const Canciones = ({ title }: { title: string }) => {
   const h1 = "Repertorio Musical"
@@ -11,75 +12,12 @@ const Canciones = ({ title }: { title: string }) => {
 
   type Nivel = "Básico" | "Intermedio" | "Avanzado"
 
-  type Cancion = {
-    titulo: string
-    artista: string
-    duracion: string
-    genero: string
-    dificultad: Nivel
-    acciones: string
-  }
-
   const dificultadColors: Record<Nivel, { text: string; bg: string }> = {
     Básico: { text: "text-green-600", bg: "bg-green-100" },
     Intermedio: { text: "text-yellow-500", bg: "bg-yellow-100" },
     Avanzado: { text: "text-red-500", bg: "bg-red-100" }
   }
-
-
-  const itemsAgenda: Cancion[] = [
-    {
-      "titulo": "Bohemian Rhapsody",
-      "artista": "Queen",
-      "duracion": "5:55",
-      "genero": "Rock",
-      "dificultad": "Avanzado",
-      "acciones": "Editar"
-    },
-    {
-      "titulo": "Hotel California",
-      "artista": "Eagles",
-      "duracion": "6:30",
-      "genero": "Rock",
-      "dificultad": "Intermedio",
-      "acciones": "Editar"
-    },
-    {
-      "titulo": "Imagine",
-      "artista": "John Lennon",
-      "duracion": "3:03",
-      "genero": "Pop",
-      "dificultad": "Básico",
-      "acciones": "Editar"
-    },
-    {
-      "titulo": "Stairway to Heaven",
-      "artista": "Led Zeppelin",
-      "duracion": "8:02",
-      "genero": "Rock",
-      "dificultad": "Avanzado",
-      "acciones": "Editar"
-    },
-    {
-      "titulo": "Wonderwall",
-      "artista": "Oasis",
-      "duracion": "4:18",
-      "genero": "Rock",
-      "dificultad": "Básico",
-      "acciones": "Editar"
-    },
-    {
-      "titulo": "Take Five",
-      "artista": "Dave Brubeck",
-      "duracion": "5:24",
-      "genero": "Jazz",
-      "dificultad": "Avanzado",
-      "acciones": "Editar"
-    }
-  ]
-
-
-
+  
   return (
     <div className="flex-1 flex flex-col">
       <Header title={title} />
@@ -121,7 +59,7 @@ const Canciones = ({ title }: { title: string }) => {
                   </thead>
                   <tbody>
 
-                    {itemsAgenda.map(({ titulo, artista, duracion, genero, dificultad }) => (
+                    {canciones.map(({ titulo, artista, duracion, genero, dificultad }) => (
                       <tr className="border-b border-border">
                         <td className="p-4 align-middle font-medium">
                           {titulo}

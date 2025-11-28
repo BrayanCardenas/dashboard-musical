@@ -4,55 +4,13 @@ import { CalendarIcon } from "../icons/CalendarIcon";
 import { MapPinIcon } from "../icons/MapPinIcon";
 import { UsersIcon } from "../icons/UsersIcon";
 
+import { eventos } from "../data/data";
+
 const Agenda = ({ title }: { title: string }) => {
   const h1 = "Gestión de Eventos"
   const p = "Organiza y administra todos tus eventos musicales"
   const btn = "Nuevo Evento"
   const h3 = "Todos los Eventos"
-
-  const itemsAgenda = [
-    {
-      "nombreEvento": "Concierto Rock Festival",
-      "fecha": "2025-12-15",
-      "lugar": "Arena Central",
-      "musicos": 8,
-      "estado": "Confirmado",
-      "acciones": "Editar"
-    },
-    {
-      "nombreEvento": "Jazz Night",
-      "fecha": "2025-12-20",
-      "lugar": "Blue Note Club",
-      "musicos": 5,
-      "estado": "Pendiente",
-      "acciones": "Editar"
-    },
-    {
-      "nombreEvento": "Acoustic Session",
-      "fecha": "2025-12-25",
-      "lugar": "Café Musical",
-      "musicos": 3,
-      "estado": "Confirmado",
-      "acciones": "Editar"
-    },
-    {
-      "nombreEvento": "Summer Festival",
-      "fecha": "2026-01-10",
-      "lugar": "Parque Central",
-      "musicos": 12,
-      "estado": "Confirmado",
-      "acciones": "Editar"
-    },
-    {
-      "nombreEvento": "Blues Night",
-      "fecha": "2026-01-15",
-      "lugar": "The Basement",
-      "musicos": 4,
-      "estado": "Pendiente",
-      "acciones": "Editar"
-    }
-  ]
-
 
   return (
     <div className="flex-1 flex flex-col">
@@ -95,10 +53,10 @@ const Agenda = ({ title }: { title: string }) => {
                   </thead>
                   <tbody>
 
-                    {itemsAgenda.map(({ nombreEvento, fecha, lugar, musicos, estado }) => (
+                    {eventos.map(({ nombre, fecha, lugar, estado, musicos }) => (
                       <tr className="border-b border-border">
                         <td className="p-4 align-middle font-medium">
-                          {nombreEvento}
+                          {nombre}
                         </td>
                         <td className="p-4 align-middle">
                           <div className="flex items-center gap-2 text-foreground">

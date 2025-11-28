@@ -7,7 +7,7 @@ const AddItem = ({ h1, p, btn }: { h1: string, p: string, btn: string }) => {
         <h1 className="text-3xl font-bold bg-neon from-primary bg-clip-text text-transparent">{h1}</h1>
         <p className="text-foreground mt-1">{p}</p>
       </div>
-      <button className="inline-flex items-center justify-center rounded-lg text-sm font-medium bg-neon text-primary-foreground h-10 px-4 py-2 gap-2 cursor-pointer">
+      <button className="inline-flex items-center justify-center rounded-lg text-sm font-medium bg-neon h-10 px-4 py-2 gap-2 cursor-pointer">
         <PlusIcon className="lucide lucide-plus h-4 w-4" />
         {btn}
       </button>

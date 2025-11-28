@@ -1,4 +1,4 @@
-export const CalendarIcon = ({ className }: { className?: string }) => (
+export const Out = ({ className }: { className?: string }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24"
@@ -11,9 +11,8 @@ export const CalendarIcon = ({ className }: { className?: string }) => (
     strokeLinejoin="round"
     className={className}
   >
-    <path d="M8 2v4"></path>
-    <path d="M16 2v4"></path>
-    <rect width="18" height="18" x="3" y="4" rx="2"></rect>
-    <path d="M3 10h18"></path>
+    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+    <polyline points="16 17 21 12 16 7" />
+    <line x1="21" x2="9" y1="12" y2="12" />
   </svg>
 );
