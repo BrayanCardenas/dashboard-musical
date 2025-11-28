@@ -6,8 +6,20 @@ import { UsersIcon } from "../../icons/UsersIcon";
 import { DiscIcon } from "../../icons/DiscIcon";
 import { SettingsIcon } from "../../icons/SettingsIcon";
 import { Out } from "../../icons/Out";
+import { useAuth } from "../../context/AuthContext"
 
 const Sidebar = () => {
+
+  const { logout } = useAuth()  
+
+  const hadleSubmit = (e: React.FormEvent) => {
+		e.preventDefault()
+
+		setTimeout(() => {
+			logout()
+		}, 1000)
+	}
+
   return (
     <aside className="w-64 border-r border-border flex flex-col h-screen justify-between">
       <div>
@@ -18,7 +30,7 @@ const Sidebar = () => {
         <ul className="flex flex-col gap-2 p-5">
           <li>
             <NavLink
-              to="/"
+              to="/dashboard"
               className={({ isActive }) =>
                 `block inline-flex items-center gap-3 text-sm text-left font-medium rounded-xl h-10 px-4 py-2 w-full transition-all cursor-pointer
                 ${isActive
@@ -90,7 +102,7 @@ const Sidebar = () => {
       </div>
 
       <div className="p-5 border-t border-gray-200 text-red-500">
-        <button className="inline-flex items-center rounded-xl text-sm font-medium h-10 px-4 py-2 w-full justify-start gap-3 hover:bg-red-100/70 cursor-pointer">
+        <button className="inline-flex items-center rounded-xl text-sm font-medium h-10 px-4 py-2 w-full justify-start gap-3 hover:bg-red-100/70 cursor-pointer" onClick={hadleSubmit}>
           <Out className="h-4 w-4" />
           Cerrar Sesión
         </button>
