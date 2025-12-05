@@ -102,7 +102,7 @@ const Sidebar = () => {
       </div>
 
       <div className="p-5 border-t border-gray-200 text-red-500">
-        <button className="inline-flex items-center rounded-xl text-sm font-medium h-10 px-4 py-2 w-full justify-start gap-3 hover:bg-red-100/70 cursor-pointer" onClick={hadleSubmit}>
+        <button className="inline-flex items-center rounded-xl text-sm font-medium h-10 px-4 py-2 w-full justify-start gap-3 hover:bg-red-100 cursor-pointer" onClick={hadleSubmit}>
           <Out className="h-4 w-4" />
           Cerrar Sesión
         </button>
